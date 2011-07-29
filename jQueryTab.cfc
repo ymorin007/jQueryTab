@@ -13,11 +13,11 @@ Find me at : Google+, Github or at the beach.
 	</cffunction>
 
 	<cffunction name="createjQueryTab">
-		<cfargument name="name" hint="Name of tab name or list of tab names" type="string">
-		<cfargument name="partial" hint="The name of the partial file or list of partial file names related to the name of the tab" type="string">
-		<cfargument name="openMouserOver" type="boolean" hint="Open tab on mouse over" default="false">
-		<cfargument name="belowContent" type="boolean" hint="Show tabs below content" default="false">
-		<cfargument name="loadjQuery" type="boolean" hint="Load jQuery,UI and CSS from Google CDN" default="true">	
+		<cfargument name="name" hint="Name of tab name or list of tab names" type="string" required="true" >
+		<cfargument name="partial" hint="The name of the partial file or list of partial file names related to the name of the tab" type="string" required="true">
+		<cfargument name="openMouserOver" type="boolean" hint="Open tab on mouse over" default="false" required="false">
+		<cfargument name="belowContent" type="boolean" hint="Show tabs below content" default="false" required="false">
+		<cfargument name="loadjQuery" type="boolean" hint="Load jQuery,UI and CSS from Google CDN" default="true" required="false">	
 		<cfargument name="jQueryUIcss" type="string" hint="The jQuery UI Theme. You can select one of the theme available at : http://www.devcurry.com/2010/05/latest-jquery-and-jquery-ui-theme-links.html (make sur to use the name under the theme)" default="base">
 			
 		<cfsavecontent variable="script">
